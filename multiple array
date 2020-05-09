@@ -1,0 +1,45 @@
+r=int(input ("input rows"))
+c=int(input ("input columns"))
+a=[]
+for i in range(r):
+    b=[]
+    for j in range(c):
+        b.append(int(input("enter colunm wise")))
+    a.append(b)
+    
+for i in range(r):
+    for j in range(c):
+        print(a[i][j],end=" ")
+    print()
+
+r1=int(input ("input rows"))
+c1=int(input ("input columns"))
+c=[]
+for i in range(r1):
+    b=[]
+    for j in range(c1):
+        b.append(int(input("enter colunm wise")))
+    c.append(b)
+    
+for i in range(r1):
+    for j in range(c1):
+        print(c[i][j],end=" ")
+    print()
+
+if r!=r1:
+    print("row of 1st matrix should be equal to row of 2nd ")
+else:
+    d=[]
+    for i in range(r):
+        f=[]
+        for j in range(c1):
+            e=0
+            for k in range(r1):
+                e=e+(a[i][k]*c[k][j])
+            f.append(e)   
+        d.append(f)
+for i in range(r):
+    for j in range(c1):
+        print(d[i][j],end=" ")
+    print()
+    
